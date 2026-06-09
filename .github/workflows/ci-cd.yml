@@ -93,3 +93,42 @@ jobs:
           file: ./frontend/Dockerfile
           push: false
           tags: clothcrm-frontend:latest
+
+  deploy:
+    name: Deploy to EC2 Server
+    needs: [backend-test, frontend-test-and-build, docker-build]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: SSH into server and deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Clean Docker cache to free up space on full disk
+            docker system prune -f || true
+            
+            # Clone repository if it doesn't exist, otherwise pull latest changes
+            if [ ! -d "$HOME/CRM" ]; then
+              git clone https://github.com/Nurdev06/crm-cloud.git "$HOME/CRM"
+            else
+              cd "$HOME/CRM"
+              git pull origin main
+            fi
+            
+            cd "$HOME/CRM"
+            
+            # Ensure .env exists
+            if [ ! -f ".env" ]; then
+              cp .env.example .env
+            fi
+            
+            # Restart services with docker-compose
+            docker compose down || true
+            docker compose up -d --build
+            
+            # Seeding (creating tables and mock data)
+            docker compose exec -T backend python seed.py || true
+
