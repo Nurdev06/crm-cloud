@@ -25,6 +25,7 @@ services:
 
   backend:
     build: ./backend
+    image: ghcr.io/nurdev06/crm-cloud-backend:latest
     container_name: crm_backend
     restart: always
     ports:
@@ -42,6 +43,7 @@ services:
 
   frontend:
     build: ./frontend
+    image: ghcr.io/nurdev06/crm-cloud-frontend:latest
     container_name: crm_frontend
     restart: always
     ports:
