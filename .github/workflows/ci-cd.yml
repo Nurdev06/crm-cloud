@@ -10,6 +10,20 @@ jobs:
   backend-test:
     name: Backend Lint & Test
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_DB: crmdb
+          POSTGRES_USER: crmuser
+          POSTGRES_PASSWORD: crmpassword
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -28,7 +42,8 @@ jobs:
       - name: Run Pytest
         env:
           APP_ENV: testing
-          DATABASE_URL: sqlite+aiosqlite:///:memory:
+          DATABASE_URL: postgresql+asyncpg://crmuser:crmpassword@localhost:5432/crmdb
+          DATABASE_URL_SYNC: postgresql://crmuser:crmpassword@localhost:5432/crmdb
         run: |
           cd backend
           pytest --maxfail=3 --disable-warnings
