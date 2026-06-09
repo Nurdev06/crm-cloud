@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(
-    title="ClothCRM API",
+    title="NurbekCRM API",
     description="""
     ## Enterprise CRM for Wholesale Clothing Distribution
     

@@ -51,43 +51,43 @@ async def clear_tables():
 async def seed_users(session: AsyncSession):
     users_data = [
         {
-            "email": "admin@clothcrm.com",
+            "email": "admin@nurbekcrm.com",
             "full_name": "Super Administrator",
             "role": UserRole.super_admin,
             "phone": "+998901234567",
         },
         {
-            "email": "sales.manager@clothcrm.com",
+            "email": "sales.manager@nurbekcrm.com",
             "full_name": "Dilnoza Karimova",
             "role": UserRole.sales_manager,
             "phone": "+998901234568",
         },
         {
-            "email": "sales.rep@clothcrm.com",
+            "email": "sales.rep@nurbekcrm.com",
             "full_name": "Jasur Toshmatov",
             "role": UserRole.sales_rep,
             "phone": "+998901234569",
         },
         {
-            "email": "warehouse@clothcrm.com",
+            "email": "warehouse@nurbekcrm.com",
             "full_name": "Behruz Yusupov",
             "role": UserRole.warehouse_manager,
             "phone": "+998901234570",
         },
         {
-            "email": "logistics@clothcrm.com",
+            "email": "logistics@nurbekcrm.com",
             "full_name": "Malika Rakhimova",
             "role": UserRole.logistics_manager,
             "phone": "+998901234571",
         },
         {
-            "email": "support@clothcrm.com",
+            "email": "support@nurbekcrm.com",
             "full_name": "Nodira Hamidova",
             "role": UserRole.customer_support,
             "phone": "+998901234572",
         },
         {
-            "email": "finance@clothcrm.com",
+            "email": "finance@nurbekcrm.com",
             "full_name": "Aziz Ergashev",
             "role": UserRole.finance_manager,
             "phone": "+998901234573",
@@ -331,7 +331,7 @@ async def seed_support_tickets(session: AsyncSession, customers, support_id: int
 
 
 async def main():
-    print("\n🌱 Starting ClothCRM seed script...\n")
+    print("\n🌱 Starting NurbekCRM seed script...\n")
     await create_tables()
     await clear_tables()
 
@@ -353,13 +353,13 @@ async def main():
             await session.commit()
             print("\n🎉 Seed completed successfully!\n")
             print("Demo credentials (all passwords: Admin123!):")
-            print("  admin@clothcrm.com          → Super Admin")
-            print("  sales.manager@clothcrm.com  → Sales Manager")
-            print("  sales.rep@clothcrm.com      → Sales Representative")
-            print("  warehouse@clothcrm.com      → Warehouse Manager")
-            print("  logistics@clothcrm.com      → Logistics Manager")
-            print("  support@clothcrm.com        → Customer Support")
-            print("  finance@clothcrm.com        → Finance Manager\n")
+            print("  admin@nurbekcrm.com          → Super Admin")
+            print("  sales.manager@nurbekcrm.com  → Sales Manager")
+            print("  sales.rep@nurbekcrm.com      → Sales Representative")
+            print("  warehouse@nurbekcrm.com      → Warehouse Manager")
+            print("  logistics@nurbekcrm.com      → Logistics Manager")
+            print("  support@nurbekcrm.com        → Customer Support")
+            print("  finance@nurbekcrm.com        → Finance Manager\n")
 
         except Exception as e:
             await session.rollback()

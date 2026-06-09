@@ -62,14 +62,14 @@ export default function Sidebar({ mobile }: SidebarProps) {
       >
         {/* Logo */}
         <div className="sidebar-logo">
-          <div className="logo-icon">C</div>
+          <div className="logo-icon">N</div>
           {!collapsed && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <div className="logo-text">ClothCRM</div>
+              <div className="logo-text">NurbekCRM</div>
               <div style={{ fontSize: 11, color: 'hsl(var(--text-muted))' }}>Enterprise</div>
             </motion.div>
           )}
