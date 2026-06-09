@@ -34,6 +34,20 @@ async def create_tables():
     print("✅ Tables created")
 
 
+async def clear_tables():
+    async with engine.begin() as conn:
+        if engine.dialect.name == "postgresql":
+            table_names = [table.name for table in Base.metadata.sorted_tables]
+            if table_names:
+                tables_str = ", ".join(f'"{name}"' for name in table_names)
+                await conn.execute(text(f"TRUNCATE TABLE {tables_str} RESTART IDENTITY CASCADE;"))
+        else:
+            for table in reversed(Base.metadata.sorted_tables):
+                await conn.execute(text(f"DELETE FROM {table.name};"))
+    print("✅ Existing data cleared")
+
+
+
 async def seed_users(session: AsyncSession):
     users_data = [
         {
@@ -319,6 +333,7 @@ async def seed_support_tickets(session: AsyncSession, customers, support_id: int
 async def main():
     print("\n🌱 Starting ClothCRM seed script...\n")
     await create_tables()
+    await clear_tables()
 
     async with SessionLocal() as session:
         try:
