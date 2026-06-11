@@ -11,7 +11,7 @@ import { getInitials, getAvatarColor, ROLE_CONFIG } from '@/lib/utils'
 
 const navItems = [
   { icon: LayoutDashboard, label: 'Dashboard', path: '/', roles: ['all'] },
-  { icon: Users, label: 'Customers', path: '/customers', roles: ['all'] },
+  { icon: Users, label: 'Mijozlar', path: '/customers', roles: ['all'] },
   { icon: UserCheck, label: 'Leads', path: '/leads', roles: ['super_admin', 'sales_manager', 'sales_rep'] },
   { icon: TrendingUp, label: 'Pipeline', path: '/pipeline', roles: ['super_admin', 'sales_manager', 'sales_rep'] },
   { icon: Package, label: 'Products', path: '/products', roles: ['all'] },

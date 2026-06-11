@@ -127,7 +127,7 @@ export default function CustomersPage() {
       {/* Header */}
       <div className="section-header">
         <div>
-          <h1 className="section-title">Customers</h1>
+          <h1 className="section-title">Mijozlar</h1>
           <p className="section-subtitle">
             {stats?.total || 0} total · {stats?.active || 0} active
           </p>

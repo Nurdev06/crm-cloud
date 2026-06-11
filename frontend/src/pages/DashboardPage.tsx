@@ -183,7 +183,7 @@ export default function DashboardPage() {
           color="green"
         />
         <KPICard
-          title="Active Customers"
+          title="Faol Mijozlar"
           value={stats?.customers?.active || 0}
           icon={Users}
           color="purple"
@@ -313,7 +313,7 @@ export default function DashboardPage() {
         </ChartCard>
 
         {/* Customer Growth */}
-        <ChartCard title="Customer Growth" subtitle="New customers per month">
+        <ChartCard title="Mijozlar O'sishi" subtitle="Oylik yangi mijozlar soni">
           <div className="chart-container">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={customerGrowth || []}>
@@ -324,7 +324,7 @@ export default function DashboardPage() {
                 <Line
                   type="monotone"
                   dataKey="new_customers"
-                  name="New Customers"
+                  name="Yangi Mijozlar"
                   stroke="#10b981"
                   strokeWidth={2.5}
                   dot={{ r: 4, fill: '#10b981', strokeWidth: 2, stroke: 'white' }}
