@@ -1,6 +1,6 @@
-# NurbekCRM — Wholesale Clothing Distribution CRM
+# retakeCRM — Wholesale Clothing Distribution CRM
 
-NurbekCRM is a modern, enterprise-grade cloud-native Customer Relationship Management (CRM) system tailored for wholesale ready-made clothing distribution companies. Built with a FastAPI backend and a React + TypeScript frontend, it orchestrates inventory, orders, logistics, support, and analytics.
+retakeCRM is a modern, enterprise-grade cloud-native Customer Relationship Management (CRM) system tailored for wholesale ready-made clothing distribution companies. Built with a FastAPI backend and a React + TypeScript frontend, it orchestrates inventory, orders, logistics, support, and analytics.
 
 ---
 
@@ -56,13 +56,13 @@ Barcha sozlamalar muvaffaqiyatli bajarilgandan so'ng, brauzeringiz orqali quyida
 #### Demo Tizimga Kirish Ma'lumotlari (Credentials)
 Barcha seeded foydalanuvchilar uchun parol: **`Admin123!`**
 
-*   **Super Admin:** `admin@nurbekcrm.com`
-*   **Sales Manager:** `sales.manager@nurbekcrm.com`
-*   **Sales Rep:** `sales.rep@nurbekcrm.com`
-*   **Warehouse Manager:** `warehouse@nurbekcrm.com`
-*   **Logistics Coordinator:** `logistics@nurbekcrm.com`
-*   **Customer Support Agent:** `support@nurbekcrm.com`
-*   **Finance Manager:** `finance@nurbekcrm.com`
+*   **Super Admin:** `admin@retakecrm.com`
+*   **Sales Manager:** `sales.manager@retakecrm.com`
+*   **Sales Rep:** `sales.rep@retakecrm.com`
+*   **Warehouse Manager:** `warehouse@retakecrm.com`
+*   **Logistics Coordinator:** `logistics@retakecrm.com`
+*   **Customer Support Agent:** `support@retakecrm.com`
+*   **Finance Manager:** `finance@retakecrm.com`
 
 ---
 

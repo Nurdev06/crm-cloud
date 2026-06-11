@@ -67,7 +67,7 @@ function InvoicePDFModal({
       <div className="modal" style={{ maxWidth: 600, padding: 30, background: '#fff', color: '#1e293b' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '2px solid #e2e8f0', paddingBottom: 20 }}>
           <div>
-            <h1 style={{ fontSize: 24, fontWeight: 800, margin: 0, color: '#0f172a' }}>NurbekCRM</h1>
+            <h1 style={{ fontSize: 24, fontWeight: 800, margin: 0, color: '#0f172a' }}>retakeCRM</h1>
             <p style={{ fontSize: 12, margin: '4px 0', color: '#64748b' }}>Wholesale Ready-Made Clothing Dist.</p>
           </div>
           <div style={{ textAlign: 'right' }}>

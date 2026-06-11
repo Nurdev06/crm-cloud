@@ -33,7 +33,7 @@ export default function NotificationsPage() {
       id: 3,
       type: 'security',
       title: 'Successful Role Delegation',
-      message: 'Super Administrator delegated "finance_manager" role permissions to user profile finance@nurbekcrm.com.',
+      message: 'Super Administrator delegated "finance_manager" role permissions to user profile finance@retakecrm.com.',
       created_at: '2026-06-03T18:30:00Z',
       read: true,
     },

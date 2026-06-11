@@ -7,7 +7,7 @@ import { authService } from '@/services'
 import toast from 'react-hot-toast'
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('admin@nurbekcrm.com')
+  const [email, setEmail] = useState('admin@retakecrm.com')
   const [password, setPassword] = useState('Admin123!')
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -89,10 +89,10 @@ export default function LoginPage() {
             className="logo-icon"
             style={{ width: 48, height: 48, fontSize: 22, borderRadius: 14 }}
           >
-            N
+            R
           </div>
           <div>
-            <h1 style={{ fontSize: 24, fontWeight: 800, marginBottom: 2 }}>NurbekCRM</h1>
+            <h1 style={{ fontSize: 24, fontWeight: 800, marginBottom: 2 }}>retakeCRM</h1>
             <p style={{ fontSize: 13, color: 'hsl(var(--text-muted))' }}>
               Enterprise Distribution Platform
             </p>
@@ -194,9 +194,9 @@ export default function LoginPage() {
             🔑 Demo Accounts (password: Admin123!)
           </p>
           {[
-            ['admin@nurbekcrm.com', 'Super Admin'],
-            ['sales.rep@nurbekcrm.com', 'Sales Representative'],
-            ['finance@nurbekcrm.com', 'Finance Manager'],
+            ['admin@retakecrm.com', 'Super Admin'],
+            ['sales.rep@retakecrm.com', 'Sales Representative'],
+            ['finance@retakecrm.com', 'Finance Manager'],
           ].map(([email, role]) => (
             <button
               key={email}

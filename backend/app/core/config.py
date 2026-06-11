@@ -5,7 +5,7 @@ import secrets
 
 class Settings(BaseSettings):
     # Application
-    APP_NAME: str = "NurbekCRM"
+    APP_NAME: str = "retakeCRM"
     APP_ENV: str = "development"
     DEBUG: bool = True
     SECRET_KEY: str = secrets.token_urlsafe(32)
@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     AWS_ACCESS_KEY_ID: str = ""
     AWS_SECRET_ACCESS_KEY: str = ""
     AWS_REGION: str = "us-east-1"
-    AWS_S3_BUCKET: str = "nurbekcrm-documents"
+    AWS_S3_BUCKET: str = "retakecrm-documents"
     AWS_CLOUDFRONT_URL: str = ""
 
     # Email
@@ -35,7 +35,7 @@ class Settings(BaseSettings):
     SMTP_PORT: int = 587
     SMTP_USER: str = ""
     SMTP_PASSWORD: str = ""
-    SMTP_FROM: str = "NurbekCRM <noreply@nurbekcrm.com>"
+    SMTP_FROM: str = "retakeCRM <noreply@retakecrm.com>"
 
     # Telegram
     TELEGRAM_BOT_TOKEN: str = ""

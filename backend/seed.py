@@ -51,43 +51,43 @@ async def clear_tables():
 async def seed_users(session: AsyncSession):
     users_data = [
         {
-            "email": "admin@nurbekcrm.com",
+            "email": "admin@retakecrm.com",
             "full_name": "Super Administrator",
             "role": UserRole.super_admin,
             "phone": "+998901234567",
         },
         {
-            "email": "sales.manager@nurbekcrm.com",
+            "email": "sales.manager@retakecrm.com",
             "full_name": "Dilnoza Karimova",
             "role": UserRole.sales_manager,
             "phone": "+998901234568",
         },
         {
-            "email": "sales.rep@nurbekcrm.com",
+            "email": "sales.rep@retakecrm.com",
             "full_name": "Jasur Toshmatov",
             "role": UserRole.sales_rep,
             "phone": "+998901234569",
         },
         {
-            "email": "warehouse@nurbekcrm.com",
+            "email": "warehouse@retakecrm.com",
             "full_name": "Behruz Yusupov",
             "role": UserRole.warehouse_manager,
             "phone": "+998901234570",
         },
         {
-            "email": "logistics@nurbekcrm.com",
+            "email": "logistics@retakecrm.com",
             "full_name": "Malika Rakhimova",
             "role": UserRole.logistics_manager,
             "phone": "+998901234571",
         },
         {
-            "email": "support@nurbekcrm.com",
+            "email": "support@retakecrm.com",
             "full_name": "Nodira Hamidova",
             "role": UserRole.customer_support,
             "phone": "+998901234572",
         },
         {
-            "email": "finance@nurbekcrm.com",
+            "email": "finance@retakecrm.com",
             "full_name": "Aziz Ergashev",
             "role": UserRole.finance_manager,
             "phone": "+998901234573",
@@ -331,7 +331,7 @@ async def seed_support_tickets(session: AsyncSession, customers, support_id: int
 
 
 async def main():
-    print("\n🌱 Starting NurbekCRM seed script...\n")
+    print("\n🌱 Starting retakeCRM seed script...\n")
     await create_tables()
     await clear_tables()
 
@@ -353,13 +353,13 @@ async def main():
             await session.commit()
             print("\n🎉 Seed completed successfully!\n")
             print("Demo credentials (all passwords: Admin123!):")
-            print("  admin@nurbekcrm.com          → Super Admin")
-            print("  sales.manager@nurbekcrm.com  → Sales Manager")
-            print("  sales.rep@nurbekcrm.com      → Sales Representative")
-            print("  warehouse@nurbekcrm.com      → Warehouse Manager")
-            print("  logistics@nurbekcrm.com      → Logistics Manager")
-            print("  support@nurbekcrm.com        → Customer Support")
-            print("  finance@nurbekcrm.com        → Finance Manager\n")
+            print("  admin@retakecrm.com          → Super Admin")
+            print("  sales.manager@retakecrm.com  → Sales Manager")
+            print("  sales.rep@retakecrm.com      → Sales Representative")
+            print("  warehouse@retakecrm.com      → Warehouse Manager")
+            print("  logistics@retakecrm.com      → Logistics Manager")
+            print("  support@retakecrm.com        → Customer Support")
+            print("  finance@retakecrm.com        → Finance Manager\n")
 
         except Exception as e:
             await session.rollback()
